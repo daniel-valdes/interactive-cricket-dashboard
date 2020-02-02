@@ -3,6 +3,7 @@ import datetime as dt
 import pandas as pd
 
 import sqlalchemy
+import scrape_images
 from sqlalchemy.ext.automap import automap_base
 from sqlalchemy.orm import Session
 from sqlalchemy import create_engine, func
@@ -37,7 +38,7 @@ session = Session(bind=engine)
 @app.route("/")
 def batters_func():
 
-    results = db.session.query(batters.player, batters.country, batters.careerlength, batters.matches, batters.inn, batters.notout, batters.runs, batters.hs, batters.avgscore, batters.hundreds, batters.fifties, batters.zero, batters.playerprofile).all()
+    results = session.query(batters.player, batters.country, batters.careerlength, batters.matches, batters.inn, batters.notout, batters.runs, batters.hs, batters.avgscore, batters.hundreds, batters.fifties, batters.zero, batters.playerprofile).all()
 
     batter_list = []
     for player, country, careerlength, matches, inn, notout, runs, hs, avgscore, hundreds, fifties, zero, playerprofile in results:
@@ -58,6 +59,14 @@ def batters_func():
         batter_list.append(batter_dict)
 
     return jsonify(batter_list) 
+
+
+@app.route("/images")
+def images():
+
+    image_urls = scrape_images.scrape()
+
+    return jsonify(image_urls)
 
 
 if __name__ == "__main__":

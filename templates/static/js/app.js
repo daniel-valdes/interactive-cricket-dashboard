@@ -1,5 +1,6 @@
 // Link to server
 const url = "http://localhost:5000";
+const url2 = "http://localhost:5000/images";
 
 var dropdown = d3.select("#selDataset");
 
@@ -160,6 +161,14 @@ function initDash() {
         d3.select("#score").text(arr1[0].hs)
     })
    
+    d3.json(url2).then(function(cricket_data) {
+
+        const arr2 = cricket_data.filter(d => d.playername === player);
+        console.log(arr2)
+        d3.select("#face").attr("src",arr2[0].img_url)
+
+    })
+
 }
 
 d3.selectAll("#selDataset").on("change", updateDash);
@@ -186,5 +195,12 @@ function updateDash() {
         d3.select("#score").text(arr1[0].hs).transition().duration(1000)
     })
 
+    d3.json(url2).then(function(cricket_data) {
+
+        const arr2 = cricket_data.filter(d => d.playername === player);
+        console.log(arr2)
+        d3.select("#face").attr("src",arr2[0].img_url)
+
+    })
 }
 
