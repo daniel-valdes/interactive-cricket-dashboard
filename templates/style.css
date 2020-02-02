@@ -1,0 +1,48 @@
+#grad {
+    background-image: url(/Users/danvaldes/Desktop/PROJECT3/templates/a5ac9d609ef27658c4c7e471f60e3691.png) no-repeat center fixed;
+    background: linear-gradient(to bottom right, white, teal);
+  }
+
+#goat {
+  color: white;
+}
+
+#pname {
+  font-size: 20px;
+  font-style: italic
+}
+
+
+#clength {
+  font-size: 20px;
+  font-style: italic
+}
+
+#country {
+  font-size: 20px;
+  font-style: italic
+}
+
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("/Users/danvaldes/Desktop/PROJECT3/templates/cricket.jpg");
+
+  /* Set a specific height */
+  height: 50%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
+}
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
+}

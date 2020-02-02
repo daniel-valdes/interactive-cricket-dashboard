@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Cricket Dashboard</title>
+  <!-- <link rel="stylesheet" href="bootstrap.min.css"> -->
+  <link rel='stylesheet' href="style.css">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+</head>
+
+<body id=grad>
+<div class="container">
+
+<div class="row">
+
+    
+  <div class="col-md-12 jumbotron text-center">
+    <h1 class="display-3">Big Bash Cricket Stats</h1>
+  </div>
+
+
+</div>   
+
+<div class="row">
+  <div class="col-md-3">
+    <div class="well">
+      <h5>Pick a Player:</h5>
+        <select id="selDataset" onchange="updateDash(this.value)"></select>
+    </div>
+    <br>
+    <br>
+    <img src="/Users/danvaldes/Desktop/PROJECT3/templates/ICC.png" height="280px" width="260px" align="middle">
+  </div>
+  <div class="col-md-9">
+    <div class="jumbotron">
+      <div class="container">
+        <h2>Player Name:</h2><p id="pname"></p>
+        <h3>Career Length: </h3><p id="clength"></p>
+        <h3>Country: </h3><p id="country"></p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="row">
+  <div class="col-md-3">
+    <!-- empty space -->
+  </div>
+    
+ 
+
+<div class="col-md-9"><div class="card-group">
+  <!-- <div class="col-md-3"> -->
+        <div class="card bg-light">
+            <div class="card-body">
+              <h4 class="card-title">RUNS</h4>  
+              <p class="card-text" id="runs"></p>
+            </div>
+        </div>
+  <!-- </div> -->
+  <!-- <div class="col-md-3"> -->
+        <div class="card bg-light">
+            <div class="card-body">
+              <h4 class="card-title">MATCHES</h4> 
+              <p class="card-text" id="matches"></p>
+            </div>
+        </div>    
+  <!-- </div>   -->
+  <!-- <div class="col-md-3"> -->
+        <div class="card bg-light">
+            <div class="card-body">
+              <h4 class="card-title">HIGH SCORE</h4>     
+              <p class="card-text" id="score"></p>
+            </div>
+        </div>
+  <!-- </div> -->
+</div></div>
+ 
+  
+</div>  
+
+
+      <br>
+        <hr>
+          <h2 align="middle" id="goat"><em>The Greatest of All Time</em></h2> 
+        <hr>
+
+<div class="row">
+  <div class="col-md-6">
+    <div id="bar">
+    </div>
+  </div>
+  <div class="col-md-6">
+    <div id="line">
+    </div>
+  </div>
+</div>
+
+<br>
+
+<div class="row">
+  <div class="col-md-12">
+    <div id="upright-bar">
+    </div>
+  </div>
+</div>
+
+<br>
+</div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.5.0/d3.js"></script>
+  <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+  <script src="static/js/app.js"></script>
+
+</body>
+</html>
