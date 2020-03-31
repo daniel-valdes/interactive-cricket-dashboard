@@ -10,13 +10,13 @@ from sqlalchemy import create_engine, func
 
 from flask import Flask, jsonify, render_template
 from flask_sqlalchemy import SQLAlchemy
-
+from config import db_name, db_pw
 
 
 # FLASK APP INITIALIZED
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'postgresql://postgres:postgres@localhost/cricket'
+app.config['SQLALCHEMY_DATABASE_URI'] = f'postgresql://{db_name}:{db_pw}@localhost/cricket'
 
 app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
 
