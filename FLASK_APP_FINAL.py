@@ -34,8 +34,11 @@ batters = Base.classes.batters
 
 session = Session(bind=engine)
 
-
 @app.route("/")
+def home():
+    return render_template('index.html')
+
+@app.route("/batters")
 def batters_func():
 
     results = session.query(batters.player, batters.country, batters.careerlength, batters.matches, batters.inn, batters.notout, batters.runs, batters.hs, batters.avgscore, batters.hundreds, batters.fifties, batters.zero, batters.playerprofile).all()

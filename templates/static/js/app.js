@@ -1,5 +1,5 @@
 // Link to server
-const url = "http://localhost:5000";
+const url = "http://localhost:5000/batters";
 const url2 = "http://localhost:5000/images";
 
 var dropdown = d3.select("#selDataset");

@@ -7,11 +7,11 @@ import json
 def init_browser():
     # @NOTE: Replace the path with your actual path to the chromedriver
     executable_path = {"executable_path": "/usr/local/bin/chromedriver"}
-    return Browser("chrome", **executable_path, headless=False)
+    return Browser("chrome", **executable_path, headless=True)
 
 def scrape():
 
-    data_url = "http://localhost:5000"
+    data_url = "http://localhost:5000/batters"
     responses  = requests.get(data_url).json()
 
     links = []
@@ -36,7 +36,7 @@ def scrape():
 
             links.append({
                 "playername": playername,
-                "img_url": 'http://www.espncricinfo.com' + img_url
+                "img_url": img_url
             }) 
 
     return links
