@@ -19,8 +19,6 @@ d3.json(url).then(function(cricket_data) {
 
 });
 
-
-
 function create_run_bar(data) {
     
     // Initialize empty data array
