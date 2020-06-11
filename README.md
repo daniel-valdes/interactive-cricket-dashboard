@@ -4,9 +4,10 @@
 **Dataset**: https://www.kaggle.com/veeralakrishna/icc-test-cricket-runs
 
 **Tools Used**
-![post](figures/postgres.png)
+<!-- ![post](figures/postgres.png)
 ![flask](figures/flask.png)
-![boot](figures/bootstrap.png)
+![boot](figures/bootstrap.png) -->
+![boot](figures/banner.png)
 
 The goal of this project was to create an interactive dashboard which pulled from a dataset of ICC cricket batsmen and dynamically display an updated bio for each player.
 
