@@ -6,7 +6,7 @@
 **Tools Used**
 ![post](figures/postgres.png)
 ![flask](figures/flask.png)
-![boot](figures/bootstrap)
+![boot](figures/bootstrap.png)
 
 The goal of this project was to create an interactive dashboard which pulled from a dataset of ICC cricket batsmen and dynamically display an updated bio for each player.
 
